@@ -1,0 +1,54 @@
+@import 'responsive.sсss';
+
+.tabs {
+	&__wrap {
+		display: flex;
+		margin-bottom: 46px;
+		@include media(sm) {
+			justify-content: center;
+			margin-bottom: 38px;
+		}
+		@include media(xxs) {
+			flex-direction: column;
+		}
+	}
+	&__item {
+		cursor: pointer;
+		font-size: 32px;
+		line-height: 1.2;
+		color: #130A08;
+		text-transform: uppercase;
+		padding-bottom: 24px;
+		border-bottom: 4px solid #130A08;
+		@include media(lgs) {
+			font-size: 28px;
+		}
+		@include media(mdx) {
+			font-size: 17px;
+		}
+		@include media(sm) {
+			border-bottom-width: 2px;
+		}
+		@include media(xxs) {
+			padding-bottom: 16px;
+		}
+		&:last-child {
+			padding-left: 50px;
+			@include media(mdx) {
+				padding-left: 30px;
+			}
+			@include media(xxs) {
+				padding-left: 0px;
+			}
+		}
+		&:not(:last-child) {
+			@include media(xxs) {
+				margin-bottom: 15px;
+			}
+		}
+		&--active {
+			color: #FF7628;
+			border-color: #FF7628;
+		}
+	}
+}
